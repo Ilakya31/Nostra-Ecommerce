@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Nostra</title>
+    <!--Google Style Sheet for fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+    <!--My Style Sheet-->
+    <link rel="stylesheet" href="style.css">
+    <!--Font Awesome CDN Link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<!--Tailwind css link-->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<body>
+
+    <!--Offer Bar-->
+
+    <div class="offerbar bg-black text-white p-3 text-center text-1xl">
+        <p>Sign Up and <b>GET 30% OFF</b> for your First Order
+            <i id="offer-close" style="cursor: pointer;" class="fa-solid fa-xmark"></i>
+        </p>
+    </div>
+
+    <!--Responsive Navbar-->
+
+    <nav class="bg-white-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
+        <h1 class="text-3xl">Nostra</h1>
+
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6 md:hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+
+        <ul class="flex gap-10 text-black-600 hidden md:flex left:20%">
+            <li>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="#new_arrival_section">New Arrival</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="#most_wanted_section">Most Wanted</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="collection.html">Collections</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="#">Contact US</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--Side Navbar-->
+    <section id="sidenav" class="bg-white-100 fixed z-20 top-0 transition-all duration-1000"
+        style="width: 50%;height: 100vh;right:-50%">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-600">
+            <li>
+                <a class="hover:underline hover:text-black" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="#new_arrival_section">New Arrival</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="#most_wanted_section">Most Wanted</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="collection.html">Collections</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="#">Contact US</a>
+            </li>
+        </ul>
+    </section>
+    <!-- navbar popup -->
+
+    <div class="navbar--section__popup hidden" id="popup">
+        <p style="text-align: right; cursor: pointer;">
+            <i id="close" class="fa-solid fa-xmark"></i>
+        </p>
+        <div class="links">
+            <p class="link"><a href="./index.html">Home</a></p>
+            <p class="link"><a href="#new_arrival_section">New Arrival</a></p>
+            <p class="link"><a href="#most_wanted_section">Most Wanted</a></p>
+            <p class="link"><a href="./collections.html">Collections</a></p>
+            <p class="link"><a href="./Contact.html">Contact us</a></p>
+        </div>
+
+    </div>
+
+
+
+    <!-- Products section -->
+    <div class="product__section">
+        <div class="filter-section">
+            <div class="filter--occasion__section">
+                <h3>Occasion</h3>
+                <label><input type="checkbox"> Rainy</label><br>
+                <label><input type="checkbox"> Party</label><br>
+                <label><input type="checkbox"> Beach</label><br>
+            </div>
+            <div class="filter--color__section">
+                <h3>Colors</h3>
+                <input type="checkbox"> Pink<br>
+                <input type="checkbox"> Blue<br>
+                <input type="checkbox"> Yellow<br>
+                <input type="checkbox"> white<br>
+            </div>
+            <div class="filter--arrival__section">
+                <h3>Arrivals</h3>
+                <input type="checkbox"> New<br>
+                <input type="checkbox"> Old<br>
+            </div>
+        </div>
+        
+        
+        <div class="product-section__search">
+            <form class="search">
+                <input type="search" placeholder="Search here for products...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
+
+            <div class="products">
+                <div class="products--section__collections">
+                    <div class="Product--collections">
+                        <img src="./images/a1.jpg">
+                        <h5>Floral Pant</h5>
+                        <p>₹320</p>
+                    </div>
+                    <div class="product--collections">
+                        <img src="./images/a2.jpg">
+                        <h5>Yellow shaded Pant</h5>
+                        <p>₹330</p>
+
+                    </div>
+                    <div class="product--collections">
+                        <img src="./images/a3.avif">
+                        <h5>Stripped Pant</h5>
+                        <p>₹220</p>
+
+                    </div>
+                    <div class="Product--collections">
+                        <img src="./images/a4.jpg">
+                        <h5>Chill co-ords Set</h5>
+                        <p>₹520</p>
+                    </div>
+                    <div class="product--collections">
+                        <img src="./images/m1.avif">
+                        <h5>Combo Pants</h5>
+                        <p>₹600</p>
+
+                    </div>
+                    <div class="product--collections">
+                        <img src="./images/m2.webp">
+                        <h5>Jerry Co-ords</h5>
+                        <p>₹600</p>
+
+                    </div>
+                    <div class="Product--collections">
+                        <img src="./images/m3.webp">
+                        <h5>Ethnic co-ords</h5>
+                        <p>₹850</p>
+                    </div>
+                    <div class="product--collections">
+                        <img src="./images/m4.jpg">
+                        <h5>Ethnic co-ords</h5>
+                        <p>₹860</p>
+
+                    </div>
+                    <div class="product--collections">
+                        <img src="./images/m5.jpg">
+                        <h5>Ethnic co-ords</h5>
+                        <p>₹1080</p>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- news letter -->
+
+    <div class="=news__container">
+        <div class="news__letter">
+            <h1>Join our News Letter</h1>
+            <h4>signup for our newspaper to get exclusive discounts, updates, and more</h4>
+            <input style="width:50%;"><br>
+            <button>Subscribe</button>
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <div class="footer__container">
+        <h1>Nostra</h1><br>
+        <h3>The Standard chunk of Lorem ipsum used since the 1500s is reprodused below for those interest</h3><br>
+
+        <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+        <i class="fa-brands fa-square-twitter" style="color: #ffffff;"></i>
+        <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+
+        <p>@ 2023 Nostra.com</p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
